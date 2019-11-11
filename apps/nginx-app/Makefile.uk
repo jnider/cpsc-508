@@ -1,0 +1,3 @@
+$(eval $(call addlib,nginxapp))
+
+NGINXAPP_SRCS-y += $(NGINXAPP_BASE)/main.c
