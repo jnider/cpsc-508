@@ -3,8 +3,8 @@
 # J.Nider 2019-21-10
 
 kernel_path=./build/nginx-app_kvm-x86_64
-qemu_ifup_path=~joel/projects/unikraft/apps/qemu-ifup.sh
-root_path="/home/joel/projects/unikraft/apps/nginx-app/rootfs"
+qemu_ifup_path=../../qemu-ifup
+root_path="rootfs"
 
 qemu-system-x86_64 \
 -enable-kvm \
