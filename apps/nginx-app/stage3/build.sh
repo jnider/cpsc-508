@@ -12,9 +12,6 @@ cp $(find ../../nginx-linux/objs/ -name '*.o') .
 cp $(find ../build/ -name 'lib*.o') .
 rm -rf *.ld.o  # get rid of the duplicates
 rm -rf libnginx.o # get rid of the unikraft port of nginx
-# remove modules that depend on gzip
-rm ngx_http_gzip_filter_module.o
-rm ngx_http_log_module.o
 
 # add our own glue code
 gcc -c glue.c -o glue.o

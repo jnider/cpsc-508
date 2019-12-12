@@ -1,12 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
-//#include <pcre.h>
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <sys/time.h>
 #include <sys/resource.h>
 #include <sys/sendfile.h>
+#include <sys/utsname.h>
+#include <sys/socket.h>
+#include <sys/vfs.h>    /* or <sys/statfs.h> */
 #include <unistd.h>
 #include <signal.h>
 #include <string.h>
@@ -14,69 +16,77 @@
 #include <sys/epoll.h>
 #include <sys/eventfd.h>
 #include <glob.h>
+#include <errno.h>
 #define _GNU_SOURCE         /* See feature_test_macros(7) */
 #include <sched.h>
-#include <crypt.h>
 
+/* network */
+uint32_t ntohl(uint32_t h)
+{
+	return 0;
+}
+
+uint16_t ntohs(uint16_t h)
+{
+	return 0;
+}
+
+uint32_t htonl(uint32_t h)
+{
+	return 0;
+}
+
+uint16_t htons(uint16_t h)
+{
+	return 0;
+}
+
+/* compiler */
 void __stack_chk_fail(void)
 {
 }
 
 int * __errno_location(void)
 {
-	return (int*)0xFBFBFBFBFBFB;
+	printf("Emulating __errno_location: %p\n", &errno);
+	return &errno;
 }
 
-//pcre_malloc = malloc;
-
-/*
-accept4
-*/
-char *crypt_r(const char *key, const char *salt,
-              struct crypt_data *data)
+int stat64(const char *pathname, struct stat *statbuf)
 {
-	return NULL;
+	return stat(pathname, statbuf);
 }
 
-int __fxstat64(int ver, int fildes, struct stat64 * stat_buf)
+int fstat64(int fd, struct stat *statbuf)
 {
-	return 0;
+	return fstat(fd, statbuf);
 }
 
-/*
-pcre *pcre_compile(const char *pattern, int options, const char **errptr, int *erroffset, const unsigned char *tableptr)
+int lstat64(const char *pathname, struct stat *statbuf)
 {
-	return NULL;
+	return lstat(pathname, statbuf);
 }
 
-int pcre_fullinfo(const pcre *code, const pcre_extra *extra, int what, void *where)
+int fstatat64(int dirfd, const char *pathname, struct stat *statbuf, int flags)
 {
-	return -90;
+	return fstatat(dirfd, pathname, statbuf, flags);
 }
 
-int pcre_config(int what, void *where)
+int __fxstat64(int ver, int fildes, struct stat * stat_buf)
 {
-	return 0;
+	//return fstat(ver, fildes, stat_buf);
+	return -1;
 }
 
-int pcre_exec(const pcre *code, const pcre_extra *extra, const char *subject, int length, int startoffset, int options, int *ovector, int ovecsize)
+int __fxstatat64(int ver, int dirfd, const char * path, struct stat * stat_buf, int flags)
 {
-	return 0;
+	//return __fxstatat(ver, dirfd, path, stat_buf, flags);
+	return -1;
 }
-
-void pcre_free_study(pcre_extra *extra)
-{
-}
-
-
-pcre_extra *pcre_study(const pcre *code, int options, const char **errptr)
-{
-	return NULL;
-}
-*/
 
 int posix_fadvise64(int fd, off_t offset, off_t len, int advice)
 {
+	printf("posix_fadvise64 is missing\n");
 	return 0;
 }
 
@@ -90,11 +100,13 @@ int sched_setaffinity(pid_t pid, size_t cpusetsize,
 /* signals */
 int sigaddset(sigset_t *set, int signum)
 {
+	printf("sigaddset is missing\n");
 	return 0;
 }
 
 int sigemptyset(sigset_t *set)
 {
+	printf("sigemptyset is missing\n");
 	return 0;
 }
 
@@ -102,35 +114,30 @@ int sigemptyset(sigset_t *set)
 
 int open64(const char *pathname, int flags, ...)
 {
+	printf("open64 is missing\n");
 	return -1;
 }
 
 int openat64(int dirfd, const char *pathname, int flags, ...)
 {
+	printf("openat64 is missing\n");
 	return -1;
 }
 
 int fcntl64(int fd, int cmd, ... /* arg */ )
 {
+	printf("fcntl64 is missing\n");
 	return -1;
 }
 
-int __xstat64(int ver, const char * path, struct stat64 * stat_buf)
+int __xstat64(int ver, const char * path, struct stat * stat_buf)
 {
-	printf("__xstat64 is missing\n");
-	return 0;
+	return __xstat(ver, path, stat_buf);
 }
 
-int __lxstat64(int ver, const char * path, struct stat64 * stat_buf)
+int __lxstat64(int ver, const char * path, struct stat * stat_buf)
 {
-	printf("__lxstat64 is missing\n");
-	return -1;
-}
-
-int __fxstatat64(int ver, int dirfd, const char * path, struct stat64 * stat_buf, int flags)
-{
-	printf("__fxstatat64 is missing\n");
-	return -1;
+	return __lxstat(ver, path, stat_buf);
 }
 
 char * __realpath_chk(const char * path, char * resolved_path, size_t resolved_len)
@@ -171,8 +178,7 @@ int ftruncate64(int fd, off_t length)
 
 int statfs64(const char *path, struct statfs *buf)
 {
-	printf("statfs is missing\n");
-	return -1;
+	return statfs(path, buf);
 }
 
 /* mm */
@@ -253,4 +259,89 @@ int eventfd(unsigned int initval, int flags)
 {
 	printf("eventfd is missing\n");
 	return -1;
+}
+
+/* host stuff */
+int gethostname(char *name, size_t len)
+{
+	strncpy(name, "joelhost", len);
+	return 0;
+}
+
+int uname(struct utsname *buf)
+{
+	printf("uname\n");
+	return -1;
+}
+
+int getpagesize(void)
+{
+	return 4096;
+}
+
+long int
+__fdelt_chk (long int d)
+{
+/*
+  if (d < 0 || d >= FD_SETSIZE)
+    __chk_fail ();
+
+  return d / __NFDBITS;
+*/
+	printf("__fdelt_chk is missing\n");
+	return -1;
+}
+
+/* borrowed from glibc printf_chk.c
+int
+___printf_chk (int flag, const char *format, ...)
+{
+  va_list ap;
+  int done;
+
+  _IO_acquire_lock_clear_flags2 (stdout);
+  if (flag > 0)
+    stdout->_flags2 |= _IO_FLAGS2_FORTIFY;
+
+  va_start (ap, format);
+  done = vfprintf (stdout, format, ap);
+  va_end (ap);
+
+  if (flag > 0)
+    stdout->_flags2 &= ~_IO_FLAGS2_FORTIFY;
+  _IO_release_lock (stdout);
+
+  return done;
+}
+*/
+
+long sysconf(int name)
+{
+	printf("sysconf\n");
+	return 0;
+}
+
+long syscall(long number, ...)
+{
+	printf("syscall %li\n", number);
+	return 0;
+}
+
+/* networking */
+struct cmsghdr *
+__cmsg_nxthdr (struct msghdr *mhdr, struct cmsghdr *cmsg)
+{
+  if ((size_t) cmsg->cmsg_len < sizeof (struct cmsghdr))
+    /* The kernel header does this so there may be a reason.  */
+    return NULL;
+
+  cmsg = (struct cmsghdr *) ((unsigned char *) cmsg
+			     + CMSG_ALIGN (cmsg->cmsg_len));
+  if ((unsigned char *) (cmsg + 1) > ((unsigned char *) mhdr->msg_control
+				      + mhdr->msg_controllen)
+      || ((unsigned char *) cmsg + CMSG_ALIGN (cmsg->cmsg_len)
+	  > ((unsigned char *) mhdr->msg_control + mhdr->msg_controllen)))
+    /* No more entries.  */
+    return NULL;
+  return cmsg;
 }

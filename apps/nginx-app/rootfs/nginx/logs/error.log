@@ -1,1 +1,11 @@
 
+2019/11/17 23:13:08 [notice] 1#0: using the "select" event method
+2019/11/17 23:13:08 [notice] 1#0: nginx/1.15.6
+2019/11/17 23:13:08 [notice] 1#0: built by gcc 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+2019/11/17 23:13:08 [notice] 1#0: OS: Unikraft Iapetus
+2019/11/17 23:13:08 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 0:0
+2019/12/11 04:41:57 [notice] 1#0: using the "select" event method
+2019/12/11 04:41:57 [notice] 1#0: nginx/1.15.6
+2019/12/11 04:41:57 [notice] 1#0: built by gcc 6.3.0 20170516 (Debian 6.3.0-18+deb9u1) 
+2019/12/11 04:41:57 [notice] 1#0: OS: Unikraft Iapetus
+2019/12/11 04:41:57 [notice] 1#0: getrlimit(RLIMIT_NOFILE): 0:0
