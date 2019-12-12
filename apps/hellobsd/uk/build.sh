@@ -1,7 +1,7 @@
 #!/bin/bash
 
 imgname=hello-kvm
-basedir=/home/joel/projects/unikraft/unikraft
+basedir=../../../unikraft
 app=.
 
 rm -f $imgname.*
