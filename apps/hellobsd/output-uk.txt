@@ -1,0 +1,579 @@
+[    0.000000] Info: [libkvmplat] setup.c @ 268  : Entering from KVM (x86)...
+[    0.000000] Info: [libkvmplat] setup.c @ 269  :      multiboot: 0x9500
+[    0.000000] dbg:  [libkvmplat] setup.c @ 129  : No initrd present
+[    0.000000] Info: [libkvmplat] setup.c @ 283  :     heap start: 0x210000
+[    0.000000] Info: [libkvmplat] setup.c @ 288  :      stack top: 0x7fd0000
+[    0.000000] Info: [libkvmplat] setup.c @ 294  : Switch from bootstrap stack to stack @0x7fe0000
+[    0.000000] Info: [libukboot] boot.c @ 187  : Unikraft constructors table at 0x1bb000
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x1087b0
+[    0.000000] dbg:  [libukbus] bus.c @ 54   : Register bus handler: 0x1cd320
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x108eb0
+[    0.000000] dbg:  [libukbus] bus.c @ 54   : Register bus handler: 0x1cd380
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x109a10
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x10a450
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x10c4a0
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x10d740
+[    0.000000] Info: [libukswrand] mwc.c @ 116  : Initialize random number generator...
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x111b70
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x119ac0
+[    0.000000] dbg:  [libukboot] boot.c @ 189  : Call constructor 0x11e8f0
+[    0.000000] Info: [libuklibparam] param.c @ 114  : libname: vfs, 96
+[    0.000000] dbg:  [libuklibparam] param.c @ 521  : Library argument ends at 2
+[    0.000000] dbg:  [libuklibparam] param.c @ 159  : at index:0 user args vfs.rootfs=9pfs
+[    0.000000] dbg:  [libuklibparam] param.c @ 196  : Expecting entire argument vfs.rootfs=9pfs
+[    0.000000] dbg:  [libuklibparam] param.c @ 230  : pargs->param: 0x1d342f, pargs->value: 0x1d343a
+[    0.000000] dbg:  [libuklibparam] param.c @ 549  : Processing argument vfs.rootfs=9pfs
+[    0.000000] dbg:  [libuklibparam] param.c @ 262  : Lib: vfs, libname: vfs.rootfs=9pfs 3
+[    0.000000] dbg:  [libuklibparam] param.c @ 297  : Section length 4 section@0x1cc468, uk_param: 24
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootflags at address: 0x1cc468
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootopts at address: 0x1cc480
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootdev at address: 0x1cc498
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootfs at address: 0x1cc4b0
+[    0.000000] dbg:  [libuklibparam] param.c @ 458  : Sanitizing value 9pfs (length 4)
+[    0.000000] dbg:  [libuklibparam] param.c @ 489  : Adjusting start to 0x1d343a & end to 0x1d343e #quotes: 0
+[    0.000000] dbg:  [libuklibparam] param.c @ 502  : Sanitized value 9pfs (length 4)
+[    0.000000] dbg:  [libuklibparam] param.c @ 392  : Parameter value 9pfs, type: 8, sign: 0 scopy: 1
+[    0.000000] Info: [libuklibparam] param.c @ 573  : Parsed 1 args
+[    0.000000] dbg:  [libuklibparam] param.c @ 159  : at index:0 user args vfs.rootdev=test
+[    0.000000] dbg:  [libuklibparam] param.c @ 196  : Expecting entire argument vfs.rootdev=test
+[    0.000000] dbg:  [libuklibparam] param.c @ 230  : pargs->param: 0x1d343f, pargs->value: 0x1d344b
+[    0.000000] dbg:  [libuklibparam] param.c @ 549  : Processing argument vfs.rootdev=test
+[    0.000000] dbg:  [libuklibparam] param.c @ 262  : Lib: vfs, libname: vfs.rootdev=test 3
+[    0.000000] dbg:  [libuklibparam] param.c @ 297  : Section length 4 section@0x1cc468, uk_param: 24
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootflags at address: 0x1cc468
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootopts at address: 0x1cc480
+[    0.000000] dbg:  [libuklibparam] param.c @ 302  : Param name: vfs.rootdev at address: 0x1cc498
+[    0.000000] dbg:  [libuklibparam] param.c @ 458  : Sanitizing value test (length 4)
+[    0.000000] dbg:  [libuklibparam] param.c @ 489  : Adjusting start to 0x1d344b & end to 0x1d344f #quotes: 0
+[    0.000000] dbg:  [libuklibparam] param.c @ 502  : Sanitized value test (length 4)
+[    0.000000] dbg:  [libuklibparam] param.c @ 392  : Parameter value test, type: 8, sign: 0 scopy: 1
+[    0.000000] Info: [libuklibparam] param.c @ 573  : Parsed 2 args
+[    0.000000] Info: [libukboot] boot.c @ 199  : Found 3 library args
+[    0.000000] Info: [libukboot] boot.c @ 207  : Initialize memory allocator...
+[    0.000000] dbg:  [libukboot] boot.c @ 216  : Try memory region: 0x210000 - 0x7fd0000 (flags: 0x31)...
+[    0.000000] Info: [libukallocbbuddy] bbuddy.c @ 470  : Initialize binary buddy allocator 210000
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 213000 - 214000 (order 0)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 214000 - 218000 (order 2)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 218000 - 220000 (order 3)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 220000 - 240000 (order 5)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 240000 - 280000 (order 6)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 280000 - 300000 (order 7)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 300000 - 400000 (order 8)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 400000 - 800000 (order 10)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 800000 - 1000000 (order 11)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 1000000 - 2000000 (order 12)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 2000000 - 4000000 (order 13)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 4000000 - 6000000 (order 13)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 6000000 - 7000000 (order 12)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7000000 - 7800000 (order 11)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7800000 - 7c00000 (order 10)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7c00000 - 7e00000 (order 9)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7e00000 - 7f00000 (order 8)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7f00000 - 7f80000 (order 7)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7f80000 - 7fc0000 (order 6)
+[    0.000000] dbg:  [libukallocbbuddy] bbuddy.c @ 427  : 210000: Add allocate unit 7fc0000 - 7fd0000 (order 4)
+[    0.000000] Info: [libukboot] boot.c @ 239  : Initialize IRQ subsystem...
+[    0.000000] Info: [libukboot] boot.c @ 246  : Initialize platform time...
+[    0.000000] Info: [libkvmplat] tscclock.c @ 243  : Clock source: TSC, frequency estimate is 2693427750 Hz
+[    1.930710] Info: [libukschedcoop] schedcoop.c @ 232  : Initializing cooperative scheduler
+[    1.938114] dbg:  [libkvmplat] sw_ctx.c @ 112  : Allocating 544 bytes for sw ctx at 0x216008
+[    1.945558] Info: [libuksched] thread.c @ 130  : Thread "Idle": pointer: 0x214058, stack: 0x7fc0000, tls: 0x215008
+[    1.955435] dbg:  [libkvmplat] sw_ctx.c @ 112  : Allocating 544 bytes for sw ctx at 0x219008
+[    1.962746] Info: [libuksched] thread.c @ 130  : Thread "main": pointer: 0x217008, stack: 0x220000, tls: 0x218008
+[    1.971311] Info: [libukboot] boot.c @ 85   : Init Table @ 0x1bb048 - 0x1bb060
+[    1.978892] Info: [libukbus] bus.c @ 136  : Initialize bus handlers...
+[    1.984814] dbg:  [libukbus] bus.c @ 78   : Initialize bus handler 0x1cd320...
+[    1.991662] dbg:  [libukbus] bus.c @ 78   : Initialize bus handler 0x1cd380...
+[    1.999183] Info: [libuk9p] 9pdev_trans.c @ 61   : Registered transport virtio
+[    2.006104] Info: [libukbus] bus.c @ 138  : Probe buses...
+[    2.010291] dbg:  [libukbus] bus.c @ 90   : Probe bus 0x1cd320...
+[    2.016476] dbg:  [libkvmpci] pci_bus.c @ 230  : Probe PCI
+[    2.020545] Info: [libkvmpci] pci_bus.c @ 271  : PCI 00:00.00 (60000 8086:1237): <no driver>
+[    2.027860] Info: [libkvmpci] pci_bus.c @ 271  : PCI 00:01.00 (60100 8086:7000): <no driver>
+[    2.035860] Info: [libkvmpci] pci_bus.c @ 271  : PCI 00:02.00 (30000 1234:1111): <no driver>
+[    2.044999] Info: [libkvmpci] pci_bus.c @ 271  : PCI 00:03.00 (20000 1af4:1000): driver 0x1cd3c0
+[    2.053111] Info: [libkvmvirtio] virtio_pci.c @ 353  : Added virtio-pci device 1000
+[    2.060694] Info: [libkvmvirtio] virtio_bus.c @ 129  : Virtio device 0x21b008 initialized
+[    2.067954] Info: [libuknetdev] netdev.c @ 96   : Registered netdev0: 0x21c018 (virtio-net)
+[    2.076790] Info: [libkvmvirtionet] virtio_net.c @ 1145 : virtio-net device registered with libuknet
+[    2.085040] Info: [libkvmpci] pci_bus.c @ 271  : PCI 00:04.00 (0200 1af4:1009): driver 0x1cd3c0
+[    2.092457] Info: [libkvmvirtio] virtio_pci.c @ 353  : Added virtio-pci device 1009
+[    2.099995] Info: [libkvmvirtio] virtio_bus.c @ 129  : Virtio device 0x21f008 initialized
+[    2.109199] Info: [libkvmvirtio9p] virtio_9p.c @ 400  : virtio-9p: Configured: features=0x1 tag=test
+[    2.117619] Info: [libkvmvirtio9p] virtio_9p.c @ 413  : virtio-9p: test started
+[    2.156124] dbg:  [libukbus] bus.c @ 90   : Probe bus 0x1cd380...
+[    2.160533] Info: [liblwip] init.c @ 151  : Initializing lwip
+[    2.166581] dbg:  [libukmpi] mbox.c @ 33   : Created mailbox 0x23d008
+[    2.170951] dbg:  [libkvmplat] sw_ctx.c @ 112  : Allocating 544 bytes for sw ctx at 0x7f90008
+[    2.178238] Info: [libuksched] thread.c @ 130  : Thread "lwip": pointer: 0x23e008, stack: 0x7f80000, tls: 0x23f008
+[    2.186876] Info: [liblwip] init.c @ 184  : Attach network device 0 to lwIP...
+[    2.196175] Info: [libkvmvirtionet] virtio_net.c @ 997  : Configured: features=0x20 max_virtqueue_pairs=1
+[    2.204155] Info: [libuknetdev] netdev.c @ 229  : netdev0: Configured interface
+[    2.211274] dbg:  [libkvmplat] sw_ctx.c @ 112  : Allocating 544 bytes for sw ctx at 0x7f98008
+[    2.218996] Info: [libuksched] thread.c @ 130  : Thread "netdev0-rxq[0]": pointer: 0x7f95008, stack: 0x7fa0000, tls: 0x7f97008
+[    2.229096] dbg:  [libkvmvirtionet] virtio_net.c @ 690  : Configuring the 256 descriptors
+[    2.237005] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/64 (0x7f99008) to virtqueue 0x7f92008...
+[    2.245132] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:0, new head:2, total_desc:2
+[    2.253935] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 2/64 (0x7fb0008) to virtqueue 0x7f92008...
+[    2.261965] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:2, new head:4, total_desc:2
+[    2.269967] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 3/64 (0x7fb1008) to virtqueue 0x7f92008...
+[    2.278146] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:4, new head:6, total_desc:2
+[    2.287119] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 4/64 (0x7fb2008) to virtqueue 0x7f92008...
+[    2.295076] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:6, new head:8, total_desc:2
+[    2.303082] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 5/64 (0x7fb3008) to virtqueue 0x7f92008...
+[    2.312465] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:8, new head:10, total_desc:2
+[    2.323685] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 6/64 (0x7fb4008) to virtqueue 0x7f92008...
+[    2.332336] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:10, new head:12, total_desc:2
+[    2.339783] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 7/64 (0x7fb5008) to virtqueue 0x7f92008...
+[    2.350980] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:12, new head:14, total_desc:2
+[    2.358313] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 8/64 (0x7fb6008) to virtqueue 0x7f92008...
+[    2.366525] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:14, new head:16, total_desc:2
+[    2.375710] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 9/64 (0x7fb7008) to virtqueue 0x7f92008...
+[    2.384439] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:16, new head:18, total_desc:2
+[    2.391753] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 10/64 (0x7fb8008) to virtqueue 0x7f92008...
+[    2.399986] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:18, new head:20, total_desc:2
+[    2.409887] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 11/64 (0x7fb9008) to virtqueue 0x7f92008...
+[    2.418441] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:20, new head:22, total_desc:2
+[    2.425865] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 12/64 (0x7fba008) to virtqueue 0x7f92008...
+[    2.437321] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:22, new head:24, total_desc:2
+[    2.447000] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 13/64 (0x7fbb008) to virtqueue 0x7f92008...
+[    2.458438] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:24, new head:26, total_desc:2
+[    2.467880] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 14/64 (0x7fbc008) to virtqueue 0x7f92008...
+[    2.475907] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:26, new head:28, total_desc:2
+[    2.483746] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 15/64 (0x7fbd008) to virtqueue 0x7f92008...
+[    2.493687] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:28, new head:30, total_desc:2
+[    2.501791] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 16/64 (0x7fbe008) to virtqueue 0x7f92008...
+[    2.510002] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:30, new head:32, total_desc:2
+[    2.517354] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 17/64 (0x7fbf008) to virtqueue 0x7f92008...
+[    2.527131] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:32, new head:34, total_desc:2
+[    2.535174] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 18/64 (0x240008) to virtqueue 0x7f92008...
+[    2.543336] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:34, new head:36, total_desc:2
+[    2.551716] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 19/64 (0x241008) to virtqueue 0x7f92008...
+[    2.559993] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:36, new head:38, total_desc:2
+[    2.568116] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 20/64 (0x242008) to virtqueue 0x7f92008...
+[    2.576166] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:38, new head:40, total_desc:2
+[    2.585571] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 21/64 (0x243008) to virtqueue 0x7f92008...
+[    2.593562] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:40, new head:42, total_desc:2
+[    2.601593] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 22/64 (0x244008) to virtqueue 0x7f92008...
+[    2.610381] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:42, new head:44, total_desc:2
+[    2.620268] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 23/64 (0x245008) to virtqueue 0x7f92008...
+[    2.628222] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:44, new head:46, total_desc:2
+[    2.636293] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 24/64 (0x246008) to virtqueue 0x7f92008...
+[    2.646300] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:46, new head:48, total_desc:2
+[    2.653836] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 25/64 (0x247008) to virtqueue 0x7f92008...
+[    2.661906] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:48, new head:50, total_desc:2
+[    2.669249] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 26/64 (0x248008) to virtqueue 0x7f92008...
+[    2.678992] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:50, new head:52, total_desc:2
+[    2.686704] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 27/64 (0x249008) to virtqueue 0x7f92008...
+[    2.694986] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:52, new head:54, total_desc:2
+[    2.704023] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 28/64 (0x24a008) to virtqueue 0x7f92008...
+[    2.712646] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:54, new head:56, total_desc:2
+[    2.720499] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 29/64 (0x24b008) to virtqueue 0x7f92008...
+[    2.728572] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:56, new head:58, total_desc:2
+[    2.737837] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 30/64 (0x24c008) to virtqueue 0x7f92008...
+[    2.745816] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:58, new head:60, total_desc:2
+[    2.753636] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 31/64 (0x24d008) to virtqueue 0x7f92008...
+[    2.763280] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:60, new head:62, total_desc:2
+[    2.770595] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 32/64 (0x24e008) to virtqueue 0x7f92008...
+[    2.778619] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:62, new head:64, total_desc:2
+[    2.786403] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 33/64 (0x24f008) to virtqueue 0x7f92008...
+[    2.796632] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:64, new head:66, total_desc:2
+[    2.804098] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 34/64 (0x250008) to virtqueue 0x7f92008...
+[    2.812194] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:66, new head:68, total_desc:2
+[    2.819648] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 35/64 (0x251008) to virtqueue 0x7f92008...
+[    2.829728] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:68, new head:70, total_desc:2
+[    2.837307] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 36/64 (0x252008) to virtqueue 0x7f92008...
+[    2.845431] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:70, new head:72, total_desc:2
+[    2.854289] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 37/64 (0x253008) to virtqueue 0x7f92008...
+[    2.862747] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:72, new head:74, total_desc:2
+[    2.870495] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 38/64 (0x254008) to virtqueue 0x7f92008...
+[    2.878589] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:74, new head:76, total_desc:2
+[    2.887641] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 39/64 (0x255008) to virtqueue 0x7f92008...
+[    2.895720] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:76, new head:78, total_desc:2
+[    2.903528] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 40/64 (0x256008) to virtqueue 0x7f92008...
+[    2.913367] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:78, new head:80, total_desc:2
+[    2.920796] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 41/64 (0x257008) to virtqueue 0x7f92008...
+[    2.928849] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:80, new head:82, total_desc:2
+[    2.936617] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 42/64 (0x258008) to virtqueue 0x7f92008...
+[    2.946815] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:82, new head:84, total_desc:2
+[    2.954209] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 43/64 (0x259008) to virtqueue 0x7f92008...
+[    2.962326] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:84, new head:86, total_desc:2
+[    2.969655] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 44/64 (0x25a008) to virtqueue 0x7f92008...
+[    2.980050] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:86, new head:88, total_desc:2
+[    2.987563] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 45/64 (0x25b008) to virtqueue 0x7f92008...
+[    2.995689] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:88, new head:90, total_desc:2
+[    3.004627] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 46/64 (0x25c008) to virtqueue 0x7f92008...
+[    3.012598] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:90, new head:92, total_desc:2
+[    3.020436] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 47/64 (0x25d008) to virtqueue 0x7f92008...
+[    3.028539] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:92, new head:94, total_desc:2
+[    3.037928] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 48/64 (0x25e008) to virtqueue 0x7f92008...
+[    3.045926] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:94, new head:96, total_desc:2
+[    3.053993] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 49/64 (0x25f008) to virtqueue 0x7f92008...
+[    3.063939] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:96, new head:98, total_desc:2
+[    3.071363] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 50/64 (0x260008) to virtqueue 0x7f92008...
+[    3.079655] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:98, new head:100, total_desc:2
+[    3.087223] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 51/64 (0x261008) to virtqueue 0x7f92008...
+[    3.096872] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:100, new head:102, total_desc:2
+[    3.104824] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 52/64 (0x262008) to virtqueue 0x7f92008...
+[    3.113036] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:102, new head:104, total_desc:2
+[    3.120360] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 53/64 (0x263008) to virtqueue 0x7f92008...
+[    3.130414] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:104, new head:106, total_desc:2
+[    3.137945] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 54/64 (0x264008) to virtqueue 0x7f92008...
+[    3.146080] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:106, new head:108, total_desc:2
+[    3.155367] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 55/64 (0x265008) to virtqueue 0x7f92008...
+[    3.163587] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:108, new head:110, total_desc:2
+[    3.171372] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 56/64 (0x266008) to virtqueue 0x7f92008...
+[    3.179536] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:110, new head:112, total_desc:2
+[    3.188691] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 57/64 (0x267008) to virtqueue 0x7f92008...
+[    3.197305] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:112, new head:114, total_desc:2
+[    3.204793] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 58/64 (0x268008) to virtqueue 0x7f92008...
+[    3.214424] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:114, new head:116, total_desc:2
+[    3.221868] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 59/64 (0x269008) to virtqueue 0x7f92008...
+[    3.230056] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:116, new head:118, total_desc:2
+[    3.237937] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 60/64 (0x26a008) to virtqueue 0x7f92008...
+[    3.248776] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:118, new head:120, total_desc:2
+[    3.256255] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 61/64 (0x26b008) to virtqueue 0x7f92008...
+[    3.264327] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:120, new head:122, total_desc:2
+[    3.273368] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 62/64 (0x26c008) to virtqueue 0x7f92008...
+[    3.281832] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:122, new head:124, total_desc:2
+[    3.289306] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 63/64 (0x26d008) to virtqueue 0x7f92008...
+[    3.297407] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:124, new head:126, total_desc:2
+[    3.306834] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 64/64 (0x26e008) to virtqueue 0x7f92008...
+[    3.316252] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:126, new head:128, total_desc:2
+[    3.326691] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/64 (0x26f008) to virtqueue 0x7f92008...
+[    3.336466] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:128, new head:130, total_desc:2
+[    3.343851] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 2/64 (0x270008) to virtqueue 0x7f92008...
+[    3.353578] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:130, new head:132, total_desc:2
+[    3.363017] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 3/64 (0x271008) to virtqueue 0x7f92008...
+[    3.371033] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:132, new head:134, total_desc:2
+[    3.378442] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 4/64 (0x272008) to virtqueue 0x7f92008...
+[    3.386595] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:134, new head:136, total_desc:2
+[    3.395707] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 5/64 (0x273008) to virtqueue 0x7f92008...
+[    3.403764] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:136, new head:138, total_desc:2
+[    3.411265] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 6/64 (0x274008) to virtqueue 0x7f92008...
+[    3.419155] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:138, new head:140, total_desc:2
+[    3.428101] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 7/64 (0x275008) to virtqueue 0x7f92008...
+[    3.436624] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:140, new head:142, total_desc:2
+[    3.444183] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 8/64 (0x276008) to virtqueue 0x7f92008...
+[    3.453765] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:142, new head:144, total_desc:2
+[    3.461194] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 9/64 (0x277008) to virtqueue 0x7f92008...
+[    3.469385] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:144, new head:146, total_desc:2
+[    3.476844] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 10/64 (0x278008) to virtqueue 0x7f92008...
+[    3.486237] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:146, new head:148, total_desc:2
+[    3.493660] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 11/64 (0x279008) to virtqueue 0x7f92008...
+[    3.502073] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:148, new head:150, total_desc:2
+[    3.509464] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 12/64 (0x27a008) to virtqueue 0x7f92008...
+[    3.519209] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:150, new head:152, total_desc:2
+[    3.526617] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 13/64 (0x27b008) to virtqueue 0x7f92008...
+[    3.534856] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:152, new head:154, total_desc:2
+[    3.543711] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 14/64 (0x27c008) to virtqueue 0x7f92008...
+[    3.551994] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:154, new head:156, total_desc:2
+[    3.559426] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 15/64 (0x27d008) to virtqueue 0x7f92008...
+[    3.567409] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:156, new head:158, total_desc:2
+[    3.576492] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 16/64 (0x27e008) to virtqueue 0x7f92008...
+[    3.584652] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:158, new head:160, total_desc:2
+[    3.592100] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 17/64 (0x27f008) to virtqueue 0x7f92008...
+[    3.600130] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:160, new head:162, total_desc:2
+[    3.609137] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 18/64 (0x7f00008) to virtqueue 0x7f92008...
+[    3.617437] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:162, new head:164, total_desc:2
+[    3.624833] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 19/64 (0x7f01008) to virtqueue 0x7f92008...
+[    3.634287] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:164, new head:166, total_desc:2
+[    3.641671] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 20/64 (0x7f02008) to virtqueue 0x7f92008...
+[    3.649958] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:166, new head:168, total_desc:2
+[    3.657346] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 21/64 (0x7f03008) to virtqueue 0x7f92008...
+[    3.666809] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:168, new head:170, total_desc:2
+[    3.674137] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 22/64 (0x7f04008) to virtqueue 0x7f92008...
+[    3.682892] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:170, new head:172, total_desc:2
+[    3.690274] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 23/64 (0x7f05008) to virtqueue 0x7f92008...
+[    3.700957] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:172, new head:174, total_desc:2
+[    3.708394] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 24/64 (0x7f06008) to virtqueue 0x7f92008...
+[    3.716528] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:174, new head:176, total_desc:2
+[    3.725422] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 25/64 (0x7f07008) to virtqueue 0x7f92008...
+[    3.733694] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:176, new head:178, total_desc:2
+[    3.741118] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 26/64 (0x7f08008) to virtqueue 0x7f92008...
+[    3.749190] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:178, new head:180, total_desc:2
+[    3.758147] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 27/64 (0x7f09008) to virtqueue 0x7f92008...
+[    3.766402] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:180, new head:182, total_desc:2
+[    3.773780] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 28/64 (0x7f0a008) to virtqueue 0x7f92008...
+[    3.783584] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:182, new head:184, total_desc:2
+[    3.791333] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 29/64 (0x7f0b008) to virtqueue 0x7f92008...
+[    3.799908] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:184, new head:186, total_desc:2
+[    3.807275] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 30/64 (0x7f0c008) to virtqueue 0x7f92008...
+[    3.817090] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:186, new head:188, total_desc:2
+[    3.824496] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 31/64 (0x7f0d008) to virtqueue 0x7f92008...
+[    3.832992] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:188, new head:190, total_desc:2
+[    3.840335] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 32/64 (0x7f0e008) to virtqueue 0x7f92008...
+[    3.850544] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:190, new head:192, total_desc:2
+[    3.857957] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 33/64 (0x7f0f008) to virtqueue 0x7f92008...
+[    3.866423] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:192, new head:194, total_desc:2
+[    3.875769] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 34/64 (0x7f10008) to virtqueue 0x7f92008...
+[    3.884169] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:194, new head:196, total_desc:2
+[    3.891591] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 35/64 (0x7f11008) to virtqueue 0x7f92008...
+[    3.899732] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:196, new head:198, total_desc:2
+[    3.908809] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 36/64 (0x7f12008) to virtqueue 0x7f92008...
+[    3.917288] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:198, new head:200, total_desc:2
+[    3.924641] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 37/64 (0x7f13008) to virtqueue 0x7f92008...
+[    3.934406] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:200, new head:202, total_desc:2
+[    3.941800] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 38/64 (0x7f14008) to virtqueue 0x7f92008...
+[    3.950238] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:202, new head:204, total_desc:2
+[    3.957599] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 39/64 (0x7f15008) to virtqueue 0x7f92008...
+[    3.967613] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:204, new head:206, total_desc:2
+[    3.974954] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 40/64 (0x7f16008) to virtqueue 0x7f92008...
+[    3.983401] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:206, new head:208, total_desc:2
+[    3.991854] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 41/64 (0x7f17008) to virtqueue 0x7f92008...
+[    4.000794] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:208, new head:210, total_desc:2
+[    4.008194] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 42/64 (0x7f18008) to virtqueue 0x7f92008...
+[    4.016323] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:210, new head:212, total_desc:2
+[    4.025312] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 43/64 (0x7f19008) to virtqueue 0x7f92008...
+[    4.034355] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:212, new head:214, total_desc:2
+[    4.042189] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 44/64 (0x7f1a008) to virtqueue 0x7f92008...
+[    4.050453] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:214, new head:216, total_desc:2
+[    4.059877] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 45/64 (0x7f1b008) to virtqueue 0x7f92008...
+[    4.068373] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:216, new head:218, total_desc:2
+[    4.075833] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 46/64 (0x7f1c008) to virtqueue 0x7f92008...
+[    4.085812] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:218, new head:220, total_desc:2
+[    4.093314] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 47/64 (0x7f1d008) to virtqueue 0x7f92008...
+[    4.101761] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:220, new head:222, total_desc:2
+[    4.109124] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 48/64 (0x7f1e008) to virtqueue 0x7f92008...
+[    4.119025] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:222, new head:224, total_desc:2
+[    4.126458] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 49/64 (0x7f1f008) to virtqueue 0x7f92008...
+[    4.134924] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:224, new head:226, total_desc:2
+[    4.143902] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 50/64 (0x7f20008) to virtqueue 0x7f92008...
+[    4.152382] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:226, new head:228, total_desc:2
+[    4.159916] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 51/64 (0x7f21008) to virtqueue 0x7f92008...
+[    4.167872] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:228, new head:230, total_desc:2
+[    4.177134] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 52/64 (0x7f22008) to virtqueue 0x7f92008...
+[    4.185551] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:230, new head:232, total_desc:2
+[    4.193129] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 53/64 (0x7f23008) to virtqueue 0x7f92008...
+[    4.202771] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:232, new head:234, total_desc:2
+[    4.210639] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 54/64 (0x7f24008) to virtqueue 0x7f92008...
+[    4.219185] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:234, new head:236, total_desc:2
+[    4.226692] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 55/64 (0x7f25008) to virtqueue 0x7f92008...
+[    4.236516] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:236, new head:238, total_desc:2
+[    4.243900] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 56/64 (0x7f26008) to virtqueue 0x7f92008...
+[    4.252372] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:238, new head:240, total_desc:2
+[    4.259788] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 57/64 (0x7f27008) to virtqueue 0x7f92008...
+[    4.269237] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:240, new head:242, total_desc:2
+[    4.276746] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 58/64 (0x7f28008) to virtqueue 0x7f92008...
+[    4.285198] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:242, new head:244, total_desc:2
+[    4.294562] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 59/64 (0x7f29008) to virtqueue 0x7f92008...
+[    4.303069] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:244, new head:246, total_desc:2
+[    4.310582] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 60/64 (0x7f2a008) to virtqueue 0x7f92008...
+[    4.318836] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:246, new head:248, total_desc:2
+[    4.328013] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 61/64 (0x7f2b008) to virtqueue 0x7f92008...
+[    4.336721] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:248, new head:250, total_desc:2
+[    4.344342] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 62/64 (0x7f2c008) to virtqueue 0x7f92008...
+[    4.354312] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:250, new head:252, total_desc:2
+[    4.361818] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 63/64 (0x7f2d008) to virtqueue 0x7f92008...
+[    4.370545] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:252, new head:254, total_desc:2
+[    4.378903] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 64/64 (0x7f2e008) to virtqueue 0x7f92008...
+[    4.389160] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:254, new head:32768, total_desc:2
+[    4.396857] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 128 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.405480] Info: [libuknetdev] netdev.c @ 368  : netdev0: Configured receive queue 0
+[    4.414203] dbg:  [libkvmvirtionet] virtio_net.c @ 690  : Configuring the 256 descriptors
+[    4.421433] Info: [libuknetdev] netdev.c @ 401  : netdev0: Configured transmit queue 0
+[    4.428679] Info: [libkvmvirtionet] virtio_net.c @ 1084 : virtio-net: 0 started
+[    4.436322] Info: [libuknetdev] netdev.c @ 420  : netdev0: Started interface
+en0: Added
+[    4.446025] Info: [liblwip] init.c @ 226  : en0: Set as default interface
+[    4.451039] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2c6008) to virtqueue 0x7f92008...
+[    4.459831] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:0, new head:32768, total_desc:2
+[    4.467981] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.477538] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2c7008 to mailbox 0x23d008
+[    4.485483] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2c8008) to virtqueue 0x7f92008...
+[    4.494314] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:2, new head:32768, total_desc:2
+[    4.502953] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.512323] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2c9008 to mailbox 0x23d008
+[    4.521208] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2ca008) to virtqueue 0x7f92008...
+[    4.530489] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:4, new head:32768, total_desc:2
+[    4.539166] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.548411] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2cb008 to mailbox 0x23d008
+[    4.556458] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2cc008) to virtqueue 0x7f92008...
+[    4.566480] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:6, new head:32768, total_desc:2
+[    4.577649] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.587582] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2cd008 to mailbox 0x23d008
+[    4.597049] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2ce008) to virtqueue 0x7f92008...
+[    4.605229] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:8, new head:32768, total_desc:2
+[    4.612879] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.622889] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2cf008 to mailbox 0x23d008
+[    4.630683] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2d0008) to virtqueue 0x7f92008...
+[    4.638881] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:10, new head:32768, total_desc:2
+[    4.646526] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.656674] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2d1008 to mailbox 0x23d008
+[    4.664249] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2d2008) to virtqueue 0x7f92008...
+[    4.672568] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:12, new head:32768, total_desc:2
+[    4.680261] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.690042] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2d3008 to mailbox 0x23d008
+[    4.697913] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2d4008) to virtqueue 0x7f92008...
+[    4.706050] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:14, new head:32768, total_desc:2
+[    4.715573] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.724004] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2d5008 to mailbox 0x23d008
+[    4.731883] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2d6008) to virtqueue 0x7f92008...
+[    4.739918] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:16, new head:32768, total_desc:2
+[    4.749784] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.758190] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2d7008 to mailbox 0x23d008
+[    4.765651] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2d8008) to virtqueue 0x7f92008...
+[    4.775108] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:18, new head:32768, total_desc:2
+[    4.783275] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.791742] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2d9008 to mailbox 0x23d008
+[    4.799212] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2da008) to virtqueue 0x7f92008...
+[    4.809096] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:20, new head:32768, total_desc:2
+[    4.817289] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.825721] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2db008 to mailbox 0x23d008
+[    4.834577] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2dc008) to virtqueue 0x7f92008...
+[    4.842537] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:22, new head:32768, total_desc:2
+[    4.850768] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.859121] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2dd008 to mailbox 0x23d008
+[    4.868382] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2de008) to virtqueue 0x7f92008...
+[    4.876322] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:24, new head:32768, total_desc:2
+[    4.885171] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.895417] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2df008 to mailbox 0x23d008
+[    4.902934] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2e0008) to virtqueue 0x7f92008...
+[    4.910985] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:26, new head:32768, total_desc:2
+[    4.918403] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.928649] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2e1008 to mailbox 0x23d008
+[    4.936162] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2e2008) to virtqueue 0x7f92008...
+[    4.944188] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:28, new head:32768, total_desc:2
+[    4.952968] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.961392] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2e3008 to mailbox 0x23d008
+[    4.968913] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2e4008) to virtqueue 0x7f92008...
+[    4.976930] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:30, new head:32768, total_desc:2
+[    4.985691] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    4.994090] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2e5008 to mailbox 0x23d008
+[    5.001602] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2e6008) to virtqueue 0x7f92008...
+[    5.009570] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:32, new head:32768, total_desc:2
+[    5.018903] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.027577] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2e7008 to mailbox 0x23d008
+[    5.035262] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2e8008) to virtqueue 0x7f92008...
+[    5.044707] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:34, new head:32768, total_desc:2
+[    5.052476] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.060944] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2e9008 to mailbox 0x23d008
+[    5.068158] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2ea008) to virtqueue 0x7f92008...
+[    5.077553] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:36, new head:32768, total_desc:2
+[    5.085330] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.093823] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2eb008 to mailbox 0x23d008
+[    5.102156] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2ec008) to virtqueue 0x7f92008...
+[    5.110202] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:38, new head:32768, total_desc:2
+[    5.117957] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.126409] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2ed008 to mailbox 0x23d008
+[    5.135033] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2ee008) to virtqueue 0x7f92008...
+[    5.142951] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:40, new head:32768, total_desc:2
+[    5.150675] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.159060] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2ef008 to mailbox 0x23d008
+[    5.167769] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2f0008) to virtqueue 0x7f92008...
+[    5.175676] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:42, new head:32768, total_desc:2
+[    5.183459] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.193292] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f1008 to mailbox 0x23d008
+[    5.201340] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2f2008) to virtqueue 0x7f92008...
+[    5.209284] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:44, new head:32768, total_desc:2
+[    5.216982] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.227011] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f3008 to mailbox 0x23d008
+[    5.234925] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2f4008) to virtqueue 0x7f92008...
+[    5.243002] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:46, new head:32768, total_desc:2
+[    5.251686] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.260346] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f5008 to mailbox 0x23d008
+[    5.268275] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2f6008) to virtqueue 0x7f92008...
+[    5.276327] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:48, new head:32768, total_desc:2
+[    5.285358] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.293766] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f7008 to mailbox 0x23d008
+[    5.301737] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x2f8008) to virtqueue 0x7f92008...
+[    5.309809] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:50, new head:32768, total_desc:2
+[    5.319553] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.328051] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f9008 to mailbox 0x23d008
+en0: Interface is up
+[    5.339472] Info: [liblwip] init.c @ 235  : en0: DHCP configuration (background)...
+[    5.348846] dbg:  [libkvmvirtionet] virtio_net.c @ 266  : Free 0 descriptors
+[    5.353775] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:0, new head:2, total_desc:2
+[    5.361323] dbg:  [libkvmvirtionet] virtio_net.c @ 244  : notify queue 1
+[    5.365826] Info: [libvfscore] rootfs.c @ 83   : Mount 9pfs to /...
+[    5.370369] Info: [libvfscore] mount.c @ 120  : VFS: mounting 9pfs at /
+[    5.376397] dbg:  [libuk9p] 9p.c @ 54   : TVERSION msize 520192 version 9P2000.u
+[    5.383768] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:0, new head:2, total_desc:2
+[    5.391133] dbg:  [libkvmvirtio9p] virtio_9p.c @ 244  : notify queue 0
+[    5.395790] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x30b008) to virtqueue 0x7f92008...
+[    5.405453] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:52, new head:32768, total_desc:2
+[    5.413057] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.421776] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x314008 to mailbox 0x23d008
+[    5.429057] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x315008) to virtqueue 0x7f92008...
+[    5.439359] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:54, new head:32768, total_desc:2
+[    5.447203] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.455701] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x316008 to mailbox 0x23d008
+[    5.464769] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.471808] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7f99008 (next: 0x0)
+[    5.479141] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.486532] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb0008 (next: 0x0)
+[    5.495651] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.503338] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb1008 (next: 0x0)
+[    5.510773] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.517872] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb2008 (next: 0x0)
+[    5.526377] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.534101] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb3008 (next: 0x0)
+[    5.541324] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.548544] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb4008 (next: 0x0)
+[    5.556969] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.564218] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb5008 (next: 0x0)
+[    5.571504] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.578771] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb6008 (next: 0x0)
+[    5.586955] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.594081] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb7008 (next: 0x0)
+[    5.601608] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.608696] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb8008 (next: 0x0)
+[    5.618488] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.625543] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fb9008 (next: 0x0)
+[    5.633130] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.640163] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fba008 (next: 0x0)
+[    5.649782] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.656840] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fbb008 (next: 0x0)
+[    5.664189] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.672254] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fbc008 (next: 0x0)
+[    5.679550] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.686884] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fbd008 (next: 0x0)
+[    5.694315] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.702746] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fbe008 (next: 0x0)
+[    5.709886] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.717228] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x7fbf008 (next: 0x0)
+[    5.724446] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.732601] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x240008 (next: 0x0)
+[    5.739792] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.746952] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x241008 (next: 0x0)
+[    5.754289] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.762548] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x242008 (next: 0x0)
+[    5.769751] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.776824] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x243008 (next: 0x0)
+[    5.784314] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.792477] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x244008 (next: 0x0)
+[    5.800057] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.807117] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x245008 (next: 0x0)
+[    5.814397] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.822628] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x246008 (next: 0x0)
+[    5.829977] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.837185] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x247008 (next: 0x0)
+[    5.844497] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.852846] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x248008 (next: 0x0)
+[    5.859991] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.867705] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x249008 (next: 0x0)
+[    5.875121] dbg:  [libukmpi] mbox.c @ 118  : Receive message from mailbox 0x23d008
+[    5.883611] dbg:  [libuknetdev] netbuf.c @ 256  : Freeing netbuf 0x24a008 (next: 0x0)
+[    5.890744] dbg:  [libuk9p] 9p.c @ 67   : RVERSION msize 520192 version 9P2000.u
+[    5.897954] dbg:  [libuk9p] 9p.c @ 98   : TATTACH fid 0 afid 4294967295 uname  aname  n_uname 4294967295
+[    5.905766] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:0, new head:2, total_desc:2
+[    5.914639] dbg:  [libkvmvirtio9p] virtio_9p.c @ 244  : notify queue 0
+[    5.919088] dbg:  [libkvmvirtionet] virtio_net.c @ 297  : Enqueue netbuf 1/1 (0x314008) to virtqueue 0x7f92008...
+[    5.927242] dbg:  [libkvmvirtio] virtio_ring.c @ 330  : Old head:56, new head:32768, total_desc:2
+[    5.935060] dbg:  [libkvmvirtionet] virtio_net.c @ 325  : Programmed 1 receive netbufs to receive virtqueue 0x7f92008 (status 0)
+[    5.945563] dbg:  [libukmpi] mbox.c @ 70   : Posted message 0x2f9008 to mailbox 0x23d008
+[    5.953026] dbg:  [libuk9p] 9p.c @ 111  : RATTACH qid type 128 version 1575042257 path 10371222
+Welcome to  _ __             _____
+ __ _____  (_) /__ _______ _/ _/ /_
+/ // / _ \/ /  '_// __/ _ `/ _/ __/
+\_,_/_//_/_/_/\_\/_/  \_,_/_/ \__/
+              Iapetus 0.3.1~832a168
+[    5.980171] Info: [libukboot] boot.c @ 114  : Pre-init table at 0x1cc4c8 - 0x1cc4c8
+[    5.987352] Info: [libukboot] boot.c @ 125  : Constructor table at 0x1cc4c8 - 0x1cc4d8
+[    5.994789] dbg:  [libukboot] boot.c @ 130  : Call constructor (entry 0 (0x1cc4c8): 0x1ba530())...
+[    6.003915] dbg:  [libpthread-embedded] pte_osal.c @ 65   : pthread-embedded constructor
+[    6.011142] dbg:  [libukboot] boot.c @ 130  : Call constructor (entry 1 (0x1cc4d0): 0x1ba500())...
+[    6.019244] Info: [libukboot] boot.c @ 135  : Calling main(1, ['./uk/hello-kvm'])
+Hello BSD!
+[    6.029052] Info: [libukboot] boot.c @ 144  : main returned 0, halting system
+[    6.037894] Info: [libkvmplat] shutdown.c @ 35   : Unikraft halted
