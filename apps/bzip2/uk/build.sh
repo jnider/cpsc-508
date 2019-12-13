@@ -1,7 +1,7 @@
 #!/bin/bash
 
 imgname=hello-kvm
-basedir=/home/joel/projects/unikraft/unikraft
+basedir=../..
 app=.
 
 rm -f $imgname.*
@@ -33,7 +33,6 @@ $app/libukboot.o \
 $app/libukboot_main.o \
 $app/libukswrand.o \
 $app/libposix_user.o \
-$app/uksysinfo.o \
 $app/libukdebug.o \
 $app/libukargparse.o \
 $app/libuktimeconv.o \
@@ -53,7 +52,6 @@ $app/libuk9p.o \
 $app/libposix_libdl.o \
 $app/libuklibparam.o \
 $app/libuktime.o \
-$app/libukmmap.o \
 $app/libukblkdev.o \
 $app/libposix_process.o \
 $app/libpthread-embedded.o \
@@ -65,6 +63,8 @@ $app/libbzip2.o \
 -Wl,--start-group     -Wl,--end-group -o $app/$imgname.ld.o
 
 #$app/libsyscall_shim.o \
+#$app/uksysinfo.o \
+#$app/libukmmap.o \
 
 echo "Creating $imgname.o"
 objcopy -w -G kvmos_* -G _libkvmplat_entry $imgname.ld.o $imgname.o
@@ -86,4 +86,4 @@ $imgname.o -o $imgname.dbg
 #-o /home/joel/projects/unikraft/apps/nginx-app/build/nginx-app_kvm-x86_64.dbg
 
 echo "strip"
-$basedir/support/scripts/sect-strip.py --with-objcopy=objcopy $imgname.dbg -o $imgname && strip -s $imgname
+$basedir/../unikraft/support/scripts/sect-strip.py --with-objcopy=objcopy $imgname.dbg -o $imgname && strip -s $imgname
