@@ -1,0 +1,3 @@
+$(eval $(call addlib,bzip2app))
+
+BZIP2APP_SRCS-y += $(BZIP2APP_BASE)/main.c
