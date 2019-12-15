@@ -1,0 +1,47 @@
+niranjhana@niranjhana-XPS-13-9360:~/bz-lb$ source z.sh > b.txt
+  file-1mb.txt: 10.072:1,  0.794 bits/byte, 90.07% saved, 1048571 in, 104108 out.
+
+real	0m0.089s
+user	0m0.089s
+sys	0m0.000s
+  file-1mb.txt: 12.563:1,  0.637 bits/byte, 92.04% saved, 1048571 in, 83463 out.
+
+real	0m0.083s
+user	0m0.083s
+sys	0m0.000s
+  file-1mb.txt: 14.059:1,  0.569 bits/byte, 92.89% saved, 1048571 in, 74585 out.
+
+real	0m0.093s
+user	0m0.089s
+sys	0m0.004s
+  file-1mb.txt: 15.144:1,  0.528 bits/byte, 93.40% saved, 1048571 in, 69240 out.
+
+real	0m0.098s
+user	0m0.094s
+sys	0m0.004s
+  file-1mb.txt: 15.551:1,  0.514 bits/byte, 93.57% saved, 1048571 in, 67428 out.
+
+real	0m0.105s
+user	0m0.104s
+sys	0m0.000s
+  file-1mb.txt: 16.532:1,  0.484 bits/byte, 93.95% saved, 1048571 in, 63427 out.
+
+real	0m0.106s
+user	0m0.106s
+sys	0m0.000s
+  file-1mb.txt: 16.548:1,  0.483 bits/byte, 93.96% saved, 1048571 in, 63365 out.
+
+real	0m0.105s
+user	0m0.105s
+sys	0m0.000s
+  file-1mb.txt: 16.653:1,  0.480 bits/byte, 94.00% saved, 1048571 in, 62966 out.
+
+real	0m0.108s
+user	0m0.108s
+sys	0m0.000s
+  file-1mb.txt: 16.855:1,  0.475 bits/byte, 94.07% saved, 1048571 in, 62210 out.
+
+real	0m0.114s
+user	0m0.106s
+sys	0m0.008s
+

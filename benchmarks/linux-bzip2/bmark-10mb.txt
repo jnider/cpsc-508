@@ -1,0 +1,47 @@
+niranjhana@niranjhana-XPS-13-9360:~/bz-lb$ source z.sh 
+  file-10mb.txt: 10.352:1,  0.773 bits/byte, 90.34% saved, 10405638 in, 1005153 out.
+
+real	0m0.730s
+user	0m0.723s
+sys	0m0.008s
+  file-10mb.txt: 13.177:1,  0.607 bits/byte, 92.41% saved, 10405638 in, 789697 out.
+
+real	0m0.751s
+user	0m0.743s
+sys	0m0.008s
+  file-10mb.txt: 14.844:1,  0.539 bits/byte, 93.26% saved, 10405638 in, 700989 out.
+
+real	0m0.799s
+user	0m0.796s
+sys	0m0.004s
+  file-10mb.txt: 15.952:1,  0.502 bits/byte, 93.73% saved, 10405638 in, 652307 out.
+
+real	0m0.825s
+user	0m0.825s
+sys	0m0.000s
+  file-10mb.txt: 16.835:1,  0.475 bits/byte, 94.06% saved, 10405638 in, 618089 out.
+
+real	0m0.861s
+user	0m0.857s
+sys	0m0.004s
+  file-10mb.txt: 17.362:1,  0.461 bits/byte, 94.24% saved, 10405638 in, 599338 out.
+
+real	0m0.890s
+user	0m0.883s
+sys	0m0.008s
+  file-10mb.txt: 17.994:1,  0.445 bits/byte, 94.44% saved, 10405638 in, 578284 out.
+
+real	0m0.919s
+user	0m0.915s
+sys	0m0.004s
+  file-10mb.txt: 18.340:1,  0.436 bits/byte, 94.55% saved, 10405638 in, 567370 out.
+
+real	0m0.959s
+user	0m0.955s
+sys	0m0.004s
+  file-10mb.txt: 18.688:1,  0.428 bits/byte, 94.65% saved, 10405638 in, 556795 out.
+
+real	0m0.966s
+user	0m0.965s
+sys	0m0.000s
+
