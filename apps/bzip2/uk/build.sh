@@ -1,24 +1,18 @@
 #!/bin/bash
 
-imgname=hello-kvm
+imgname=bzip2_kvm-x86_64
 basedir=../..
 app=.
 
 rm -f $imgname.*
 
-#objs="libkvmplat.o libkvmpci.o libkvmvirtio.o main.o libukboot.o libukboot_main.o libukdebug.o libukargparse.o libuktimeconv.o libnolibc.o libukalloc.o libukallocbbuddy.o libuksched.o libukschedcoop.o libukbus.o libuksglist.o"
-
-objs="libvfscore.o main.o libuktime.o libkvmplat.o libkvmpci.o libkvmvirtio.o libuksched.o libukdebug.o libnewlibglue.o libuklock.o libukalloc.o libposix_process.o libnewlibc.o libpthread-embedded.o libukallocbbuddy.o libukboot.o libnewlibm.o libposix_user.o libukschedcoop.o libukargparse.o libuklibparam.o libuktimeconv.o"
-
-#ld -T link64.lds -T extra.ld libvfscore.o main.o libuktime.o libkvmplat.o libuksched.o libukdebug.o libnewlibglue.o libuklock.o libukalloc.o libposix_process.o libnewlibc.o libpthread-embedded.o libukallocbbuddy.o libukboot.o libnewlibm.o libposix_user.o libukschedcoop.o libukargparse.o libuklibparam.o libuktimeconv.o -o hello2
+#objs="libvfscore.o main.o libuktime.o libkvmplat.o libkvmpci.o libkvmvirtio.o libuksched.o libukdebug.o libnewlibglue.o libuklock.o libukalloc.o libposix_process.o libnewlibc.o libpthread-embedded.o libukallocbbuddy.o libukboot.o libnewlibm.o libposix_user.o libukschedcoop.o libukargparse.o libuklibparam.o libuktimeconv.o"
 
 # copy the glue functions
 cp $basedir/../bink/__stack_chk_fail.o .
 cp $basedir/../bink/__printf_chk.o .
 
 echo "Partially linking $imgname.ld.o"
-#gcc -r -nostdinc -nostdlib -Wl,--omagic -Wl,-r -Wl,-d -Wl,--build-id=none -no-pie  -Wl,-m,elf_x86_64  \
-#$objs -Wl,--start-group -Wl,--end-group -o $imgname.ld.o
 gcc -r -nostdinc -nostdlib -Wl,--omagic -Wl,-r -Wl,-d \
 -Wl,--build-id=none -no-pie  -Wl,-m,elf_x86_64  \
 $app/libkvmplat.o \

@@ -7,7 +7,7 @@ if [[ "$1" == "" ]]; then
 	exit
 fi
 
-kernel_path=./$1/hello-kvm
+kernel_path=./$1/bzip2_kvm-x86_64
 qemu_ifup_path=../../qemu-ifup
 root_path="rootfs"
 output=output-$1.txt
